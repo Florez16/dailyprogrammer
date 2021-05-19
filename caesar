@@ -1,0 +1,10 @@
+# https://www.reddit.com/r/dailyprogrammer/comments/myx3wn/20210426_challenge_387_easy_caesar_cipher/
+
+def caesar(string, num):
+    result = ""
+    for i in range(len(string)):
+        code = ((ord(string[i]) - 97 + num) % 26) + 97
+        #print(code)
+        result += chr(code)
+
+    return result
